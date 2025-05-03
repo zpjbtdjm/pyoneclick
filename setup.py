@@ -2,9 +2,10 @@ from setuptools import setup, find_packages
 
 setup(
     name="pyoneclick",
-    version="0.0.1",
+    version="0.0.3",
     author="zpjbtdjm",
-    description="Automatically filter control variables, similar to Stata's oneclick command but with more function.",
+    description="This tool enables the automatic filtering of control variables, "
+                "similar to Stata's 'oneclick' command, while offering enhanced functionality.",
     long_description=open("README.md", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
     packages=find_packages(),
