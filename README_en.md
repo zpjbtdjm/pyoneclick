@@ -3,7 +3,7 @@
 
 This Python tool can automatically filter control variables, similar to Stata's `oneclick` command but with more powerful features.
 
-- 中文: [README.md](https://github.com/zpjbtdjm/pyoneclick/blob/master/README.md)
+- 中文：[README.md](https://github.com/zpjbtdjm/pyoneclick/blob/master/README.md)
 
 ## Introduction
 
@@ -12,9 +12,11 @@ This Python tool can automatically filter control variables, similar to Stata's 
 The development of this research is based on the following insights:
 
 1. A trade-off between time and optimal solutions needs to be made. During the process of filtering control variables, when there are too many control variables, finding the optimal solution becomes time-consuming and unacceptable. In many cases, we only need a quick result that works, that is, an approximate optimal solution rather than all possible usable results.
+
 2. Addressing the issue of "solve one problem only to find another cropping up." Oftentimes, when a variable becomes significant in a specific command, another variable or the same variable in another command may no longer be significant. Therefore, the command used for screening must address such issues where simultaneous significance is required.
 
 ### Command Features
+
 Compared to the `oneclick` command in Stata, this command incorporates several new features. It has the following characteristics:
 
 1. More efficient filtering. This command is based on the simulated annealing algorithm rather than enumeration, resulting in lower time complexity during the search for usable control variables.
@@ -26,6 +28,7 @@ Compared to the `oneclick` command in Stata, this command incorporates several n
 ## Usage
 
 ### Requirements
+
 Before formal use, we need to meet the following conditions:
 
 1. Licensed Stata software. The version must be Stata 17 or above.
