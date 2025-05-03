@@ -38,6 +38,14 @@ pyoneclick [-h] -d DATA [-a ADJUST] [-f FIXED] -c COMMAND [-z] [-t THRESHOLD] [-
 
 ## 命令示例
 
+### 预设
+
+要运行这些示例，请导航到 `examples/` 目录并执行以下命令：
+
+```bash
+cd examples
+```
+
 ### 单个统计量估计
 
 1. 基本估计形式。`-c` 的命令中必须显式列出所有控制变量列表，不能使用宏定义或简写。
