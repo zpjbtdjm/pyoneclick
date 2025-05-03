@@ -3,8 +3,8 @@
 
 ## 使用前须知
 
-- 本教程将以面板数据的估计为例。我们默认您精通 stata 常规命令操作，含面板估计的命令 `reghdfe`、`xtlogit` 等。
-- 如果您对 stata 语法或者以上 stata 命令不熟悉，请在 stata 中使用 `help` 命令查看相关命令的原理，并确保您完整掌握相关命令的使用方式之后再使用本程序。
+- 本教程将以面板数据的估计为例。我们默认您精通 Stata 常规命令操作，含面板估计的命令 `reghdfe`、`xtlogit` 等。
+- 如果您对 Stata 语法或者以上 Stata 命令不熟悉，请在 Stata 中使用 `help` 命令查看相关命令的原理，并确保您完整掌握相关命令的使用方式之后再使用本程序。
 
 ## 基本使用方法
 
@@ -18,7 +18,7 @@ pyoneclick [-h] -d DATA [-a ADJUST] [-f FIXED] -c COMMAND [-z] [-t THRESHOLD] [-
 - `-d` 或  `--data`：指定数据的来源路径。
 
 ### 命令执行
-这是一些基于 stata 的命令参数，可以指定以下内容：
+这是一些基于 Stata 的命令参数，可以指定以下内容：
 - `-a` 或 `--adjust`：待调整显著性的变量。
 - `-f` 或 `--fixed`：在回归中必须加入的锁定变量。
 - `-c` 或 `--command`：完整的回归命令。
@@ -40,9 +40,9 @@ pyoneclick [-h] -d DATA [-a ADJUST] [-f FIXED] -c COMMAND [-z] [-t THRESHOLD] [-
 
 ### 预设
 
-要运行这些示例，请导航到 `examples/` 目录并执行以下命令：
+要运行这些示例，请先导航到 `examples` 目录再执行 `pyoneclick` 命令
 
-```bash
+```shell
 cd examples
 ```
 
