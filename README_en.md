@@ -3,7 +3,7 @@
 
 This Python tool can automatically filter control variables, similar to Stata's `oneclick` command but with more powerful features.
 
-- Chinese: [README.md](https://github.com/zpjbtdjm/pyoneclick/blob/master/README.md)
+- 中文: [README.md](https://github.com/zpjbtdjm/pyoneclick/blob/master/README.md)
 
 ## Introduction
 
