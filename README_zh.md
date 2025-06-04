@@ -59,5 +59,5 @@ pip install pyoneclick
 ## 第三方库
 
 本项目使用了以下开源库：
-- [stata-setup](https://pypi.org/project/stata-setup/)：遵循[Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)许可协议。
+- [stata-setup](https://pypi.org/project/stata-setup/)：遵循 [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) 许可协议。
 

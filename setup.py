@@ -2,12 +2,12 @@ from setuptools import setup, find_packages
 
 setup(
     name="pyoneclick",
-    version="0.0.5",
+    version="0.0.6",
     author="zpjbtdjm",
     description="This tool enables the automatic screening of control variables"
                 "to adjust the significance of specific variables, "
                 "similar to Stata's 'oneclick' command, while offering enhanced functionality.",
-    long_description=open("README_zh.md", encoding="utf-8").read(),
+    long_description=open("README.md", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
     packages=find_packages(),
     classifiers=[
