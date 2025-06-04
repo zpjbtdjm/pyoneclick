@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="pyoneclick",
-    version="0.0.3",
+    version="0.0.5",
     author="zpjbtdjm",
     description="This tool enables the automatic screening of control variables"
                 "to adjust the significance of specific variables, "

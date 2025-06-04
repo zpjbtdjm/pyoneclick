@@ -1,7 +1,7 @@
 Metadata-Version: 2.4
 Name: pyoneclick
-Version: 0.0.3
-Summary: This tool enables the automatic filtering of control variables, similar to Stata's 'oneclick' command, while offering enhanced functionality.
+Version: 0.0.5
+Summary: This tool enables the automatic screening of control variablesto adjust the significance of specific variables, similar to Stata's 'oneclick' command, while offering enhanced functionality.
 Author: zpjbtdjm
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
@@ -21,9 +21,9 @@ Dynamic: summary
 
 # pyoneclick
 
-该 Python 工具能够自动过滤控制变量，类似于 Stata 的 `oneclick` 命令，但提供更强大的功能。
+该 Python 工具能够自动筛选控制变量以调整特定变量的显著性，类似于 Stata 的 `oneclick` 命令但提供更强大的功能。
 
-- English: [README_en.md](https://github.com/zpjbtdjm/pyoneclick/blob/master/README_en.md)
+- English: [README.md](https://github.com/zpjbtdjm/pyoneclick/blob/master/README.md)
 
 ## 简介
 
@@ -70,8 +70,14 @@ pip install pyoneclick
 ### 开始使用
 
 `pyoneclick` 命令的功能较为复杂，完整掌握可能需要一定时间。
-- 我们提供了详细的使用说明，以帮助用户快速上手：[查看详细使用说明](https://github.com/zpjbtdjm/pyoneclick/blob/master/docs/USAGE.md)
+- 我们提供了详细的使用说明，以帮助用户快速上手：[查看详细使用说明](https://github.com/zpjbtdjm/pyoneclick/blob/master/docs/USAGE_zh.md)
 
 ## 致谢
 
 本项目的开发受到了 [StataOneClick](https://github.com/ShutterZor/StataOneClick) 项目的启发，在此我们向该项目的作者致以诚挚的感谢。作者的卓越工作为我们的项目提供了宝贵的思路，并成为了本项目开发的重要基础。
+
+## 第三方库
+
+本项目使用了以下开源库：
+- [stata-setup](https://pypi.org/project/stata-setup/)：遵循[Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)许可协议。
+
