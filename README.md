@@ -3,7 +3,7 @@
 
 This Python tool can automatically screen control variables to adjust the significance of specific variables, similar to Stata's `oneclick` command but with more powerful features.
 
-- 中文：[README.md](https://github.com/zpjbtdjm/pyoneclick/blob/master/README_zh.md)
+- 中文：[README_zh.md](https://github.com/zpjbtdjm/pyoneclick/blob/master/README_zh.md)
 
 ## Introduction
 
