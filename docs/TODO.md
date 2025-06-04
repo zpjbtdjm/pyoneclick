@@ -1,9 +1,9 @@
-# 待处理任务
+# Pending Tasks
 
-## 1. 高优先级
-- 支持控制统计量正负符号。
-- 对现有存在的部分不符合规范但可以运行的未定义行为添加错误提示。
+## 1. High Priority
+- Support for controlling the sign of statistics.
+- Add error messages for some existing undefined behaviors that do not comply with norms but can still run.
 
-## 2. 低优先级
-- 添加变量互斥的选项，适用于某两个控制变量不能同时出现的情况。
-- 支持待估计命令组中同时包含 t 值与 z 值的统计量。
+## 2. Low Priority
+- Add an option for variable exclusivity, applicable when two control variables cannot appear simultaneously.
+- Support for statistics that include both t-statistics and z-statistics in commands to be estimated.
