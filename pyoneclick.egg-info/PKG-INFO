@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: pyoneclick
-Version: 0.0.5
+Version: 0.0.6
 Summary: This tool enables the automatic screening of control variablesto adjust the significance of specific variables, similar to Stata's 'oneclick' command, while offering enhanced functionality.
 Author: zpjbtdjm
 Classifier: Programming Language :: Python :: 3
@@ -21,63 +21,63 @@ Dynamic: summary
 
 # pyoneclick
 
-该 Python 工具能够自动筛选控制变量以调整特定变量的显著性，类似于 Stata 的 `oneclick` 命令但提供更强大的功能。
+This Python tool can automatically screen control variables to adjust the significance of specific variables, similar to Stata's `oneclick` command but with more powerful features.
 
-- English: [README.md](https://github.com/zpjbtdjm/pyoneclick/blob/master/README.md)
+- 中文：[README_zh.md](https://github.com/zpjbtdjm/pyoneclick/blob/master/README_zh.md)
 
-## 简介
+## Introduction
 
-### 洞见
+### Insights
 
-本研究的开发基于以下见解：
+The development of this research is based on the following insights:
 
-1. 要做时间与最优解的权衡。在筛选控制变量的过程中，当控制变量过多时，筛选最优解在时间上是不可接受的。很多时候我们只需要快速得出一个能用的结果，即一个接近最优解的结果，而不是所有能用的结果。
+1. A trade-off between time and optimal solutions needs to be made. During the process of filtering control variables, when there are too many control variables, finding the optimal solution becomes time-consuming and unacceptable. In many cases, we only need a quick result that works, that is, an approximate optimal solution rather than all possible usable results.
 
-2. 要解决按下葫芦浮起瓢的问题。很多时候一个变量在特定命令中显著了，另一个变量或者另一条命令中的同一个变量又不显著了，因此用于筛选的命令需要解决这类需要同时显著的问题。
+2. Addressing the issue of "solve one problem only to find another cropping up." Oftentimes, when a variable becomes significant in a specific command, another variable or the same variable in another command may no longer be significant. Therefore, the command used for screening must address such issues where simultaneous significance is required.
 
-### 命令特点
+### Command Features
 
-相对 Stata 中的 oneclick 命令，本命令加入了许多新的特性。本命令具有以下特性：
+Compared to the `oneclick` command in Stata, this command incorporates several new features. It has the following characteristics:
 
-1. 筛选更加高效。本命令基于模拟退火算法而非枚举，在搜索可用控制变量过程中具有较低的时间复杂度。
+1. More efficient filtering. This command is based on the simulated annealing algorithm rather than enumeration, resulting in lower time complexity during the search for usable control variables.
 
-2. 逻辑更加清晰。在执行命令过程中可以直接传入 Stata 的原生代码，无需改变代码习惯，命令可读性更高。
+2. Clearer logic. The original Stata code can be directly passed into the command during execution, without needing to change coding habits, making the command more readable.
 
-3. 功能范围更广。支持多命令联合估计，支持同时对多个变量或多条命令的显著性进行调整。
+3. Broader functionality. Supports joint estimation across multiple commands and adjusts the significance of multiple variables or multiple commands at the same time.
 
-## 使用
+## Usage
 
-### 需求
+### Requirements
 
-在正式使用之前，我们需要具备以下条件：
+Before formal use, we need to meet the following conditions:
 
-1. 拥有有效的许可证的 Stata 软件。软件版本必须为 Stata 17 及以上。
+1. Licensed Stata software. The version must be Stata 17 or above.
 
-2. 合适的 Python 3 环境。建议为 Python 3.8 及以上版本。
+2. An appropriate Python 3 environment. Python 3.8 or higher is recommended.
 
-### 安装
+### Installation
 
-1. 首先需要在 Windows 控制面板中设置系统全局变量，变量名为 `STATA_PATH`。变量的值设定为 Stata 安装路径加上版本号。以 64 位电脑上 Stata 18 的 MP 版本为例，系统默认安装路径以下所示：
+1. First, set a global system variable named `STATA_PATH` in the Windows Control Panel. The value of the variable should be the installation path of Stata plus the version number. For example, for the MP version of Stata 18 on a 64-bit computer, the default installation path would look like this:
 ```
 STATA_PATH=C:\Program Files\Stata18\StataMP-64.exe
 ```
 
-2. 安装 `pyoneclick` 命令：
+2. Install the `pyoneclick` command:
 ```shell
 pip install pyoneclick
 ```
 
-### 开始使用
+### Getting Started
 
-`pyoneclick` 命令的功能较为复杂，完整掌握可能需要一定时间。
-- 我们提供了详细的使用说明，以帮助用户快速上手：[查看详细使用说明](https://github.com/zpjbtdjm/pyoneclick/blob/master/docs/USAGE_zh.md)
+The functionality of the `pyoneclick` command is relatively complex, and mastering it fully may take some time.
+- We provide detailed instructions to help users get started quickly: [View detailed usage instructions](https://github.com/zpjbtdjm/pyoneclick/blob/master/docs/USAGE.md)
 
-## 致谢
+## Acknowledgments
 
-本项目的开发受到了 [StataOneClick](https://github.com/ShutterZor/StataOneClick) 项目的启发，在此我们向该项目的作者致以诚挚的感谢。作者的卓越工作为我们的项目提供了宝贵的思路，并成为了本项目开发的重要基础。
+The development of this project was inspired by the [StataOneClick](https://github.com/ShutterZor/StataOneClick) project, and we sincerely thank the author of that project. Their excellent work provided valuable insights and became a crucial foundation for our project’s development.
 
-## 第三方库
+## Third-Party Libraries
 
-本项目使用了以下开源库：
-- [stata-setup](https://pypi.org/project/stata-setup/)：遵循[Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)许可协议。
+This project uses the following open-source libraries:
+- [stata-setup](https://pypi.org/project/stata-setup/): Licensed under [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
