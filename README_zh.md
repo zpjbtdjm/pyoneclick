@@ -48,21 +48,17 @@ pip install pyoneclick
 
 ### 简单开始
 
-1. 指定数据。首先请确保您已经安装该命令并在 Windows 系统中正确设定了环境变量。在第一次执行统计估计命令之前，请使用参数指定要使用的 `.dta` 数据文件：
+1. 指定数据。第一次执行统计估计命令之前，使用参数指定要使用的 `.dta` 数据文件：
 
 ```shell
 pyoneclick -d "examples/example.dta" 
 ```
 
-也可以在进行估计的同时指定数据，但请注意在任何时候使用 `-d` 参数会更新后续所有命令的默认数据文件。
-
-2. 简单估计。必须通过 `-c` 指定要运行的 stata 命令，显式列出所有控制变量列表，不能使用宏定义或简写：
+2. 最简估计。通过 `-c` 指定要运行的 stata 命令，模型会自动解析因变量与自变量，并通过计算最优控制变量列表实现待调整变量的显著性调节：
 
 ```shell
 pyoneclick -c "reghdfe y1 x1 c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 c19 c20 c21 c22 c23 c24 c25 c26 c27 c28 c29 c30 c31, absorb( stkcd year )"
 ```
-
-模型会自动解析因变量与自变量，并通过计算最优控制变量列表实现待调整变量的显著性调节。
 
 `pyoneclick` 命令的完整功能较为复杂，完整掌握可能需要一定时间。
 - 我们提供了详细的使用说明，以帮助用户快速上手：[查看详细使用说明](https://github.com/zpjbtdjm/pyoneclick/blob/master/docs/USAGE_zh.md)

@@ -48,23 +48,19 @@ pip install pyoneclick
 
 ### Quick Start
 
-1. Specify the data. First, ensure that you have installed the command and correctly set the environment variables in your Windows system. Before running any statistical estimation command for the first time, use the `-d` parameter to specify the `.dta` data file to be used:
+1. Specify the data. Before executing the statistical estimation command for the first time, use the `-d` parameter to specify the `.dta` data file to be used:
 
 ```shell
 pyoneclick -d "examples/example.dta" 
 ```
 
-You can also specify the data file at the same time as performing the estimation. Note, however, that using the `-d` parameter at any time will update the default data file for all subsequent commands.
-
-2. Simplest estimation. You must use the `-c` parameter to specify the Stata command to run, explicitly listing all control variables; macros or shorthand notations are not allowed:
+2. Simplest estimation. Use `-c` to specify the Stata command to run; the model will automatically parse the dependent and independent variables and adjust the significance of covariates by computing an optimal list of control variables:
 
 ```shell
 pyoneclick -c "reghdfe y1 x1 c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 c19 c20 c21 c22 c23 c24 c25 c26 c27 c28 c29 c30 c31, absorb( stkcd year )"
 ```
 
-The model automatically parses the dependent and independent variables and adjusts the significance of variables to be tuned by computing an optimal list of control variables.
-
-The functionality of the `pyoneclick` command is relatively complex, and mastering it fully may take some time.
+The full functionality of the `pyoneclick` command is relatively complex, and mastering it fully may take some time.
 - We provide detailed instructions to help users get started quickly: [View detailed usage instructions](https://github.com/zpjbtdjm/pyoneclick/blob/master/docs/USAGE.md)
 
 ## Acknowledgments
