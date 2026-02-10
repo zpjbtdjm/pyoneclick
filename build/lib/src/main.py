@@ -5,6 +5,11 @@ import random
 import math
 import argparse
 import re
+import sys
+import os
+
+
+CONFIG_FILE = os.path.expanduser("~/.pyoneclick_config")
 
 
 class PyOneclick:
@@ -192,17 +197,25 @@ class PyOneclick:
         return _best_p_vals, _best_sel_vars
 
 
+
+
 def main() -> None:
 
     # Parameter parsing
-    parser = argparse.ArgumentParser(description='Pyoneclick Parameter Parser')
-    parser.add_argument('-d', '--data', required=True,
+    class PyoneclickArgumentParser(argparse.ArgumentParser):
+        def parse_args(self, *args, **kwargs):
+            parsed = super().parse_args(*args, **kwargs)
+            if not parsed.data and not parsed.command:
+                self.error("at least one of -d/--data or -c/--command is required")
+            return parsed
+    parser = PyoneclickArgumentParser(description='Pyoneclick Parameter Parser')
+    parser.add_argument('-d', '--data', type=str, default=None,
                         help='Data file path')
     parser.add_argument('-a', '--adjust', action='append', default=None,
                         help='Independent variable that need to be adjusted')
     parser.add_argument('-f', '--fixed', action='append', default=None,
                         help='Fixed independent variable')
-    parser.add_argument('-c', '--command', action='append', required=True,
+    parser.add_argument('-c', '--command', action='append', default=None,
                         help='Full regression command')
     parser.add_argument('-z', '--z_statistic', action='store_true',
                         help='Z-statistic mode')
@@ -223,7 +236,17 @@ def main() -> None:
     args = parser.parse_args()
 
     # Parse command-line arguments
-    data: str = args.data
+    if args.data is None:
+        try:
+            with open(CONFIG_FILE) as f:
+                data = f.read().strip()
+        except FileNotFoundError:
+            sys.stderr.write("pyoneclick: error: data must be specified via -d/--data")
+            sys.exit(1)
+    else:
+        with open(CONFIG_FILE, "w") as f:
+            f.write(args.data)
+        sys.exit(0)
     _full_commands: list[str] = args.command
     _adjust_vars: Optional[list[str]] = args.adjust
     _fixed_vars: Optional[list[str]] = args.fixed
